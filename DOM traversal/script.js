@@ -9,8 +9,12 @@
 
 /*  ==============
     DOM Traversal 
+    * preventDefault
+    * Event bubbling ↕ go to wadah/induk
     ==============*/
-// parentElement inilah DOM traversalnya
+// ! parentElement. inilah e.g DOM traversalnya
+// ! menghentikan perilaku default e.g : <a>
+
 const close = document.querySelectorAll(".close");
 
 // for (let i = 0; i < close.length; i++) {
@@ -20,8 +24,25 @@ const close = document.querySelectorAll(".close");
 //   });
 // }
 
-close.forEach((el) => {
-  el.addEventListener("click", (e) => {
+// close.forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     e.target.parentElement.remove("close");
+//     e.preventDefault();
+//     e.stopPropagation();
+//   });
+// });
+
+// const card = document.querySelectorAll(".card");
+// card.forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     alert("okooko");
+//   });
+// });
+
+const container = document.querySelector(".container");
+container.addEventListener("click", (e) => {
+  if (e.target.className == "close") {
     e.target.parentElement.remove("close");
-  });
+    e.preventDefault();
+  }
 });
