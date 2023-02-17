@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: grey;
+}
+
+.container {
+  width: 600px;
+  border: 5px solid white;
+  margin: 10px auto;
+  line-height: 0;
+  overflow: auto;
+}
+
+.container img {
+  width: 600px;
+  height: 350px;
+}
+
+.thumbnail .thumb {
+  width: 200px;
+  height: 116px;
+  float: left;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.thumbnail .thumb:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
